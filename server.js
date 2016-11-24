@@ -4,7 +4,6 @@ var bodyParser = require('body-parser');
 
 // Routing Paths
 var index =require('./routes/index');
-var tasks =require('./routes/tasks');
 
 var port = 3000;
 
@@ -24,7 +23,6 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 // Routes
 app.use('/', index);
-app.use('/api', tasks);
 
 app.listen(port, function(){
   console.log('Server Listening on port ' + port);
